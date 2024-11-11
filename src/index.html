@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopt Me!</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="root">Not rendered</div>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="./App.js"></script>
+  <!-- <script>
+    const App = () => {
+      return React.createElement( // we are going to use JSX instead of this
+        'div', // we could give it either string or a component
+        { id: 'something-important' },
+        React.createElement('h1', {}, 'Adopt Me!') //! second argument is the props, third argument is the children
+      );
+    }
+
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    // Old way: ReactDOM.render(container, <App />);
+    root.render(React.createElement(App)); // we are giving the App component to the render function
+  </script> -->
+</body>
+</html>
+
