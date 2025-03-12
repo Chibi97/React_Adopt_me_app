@@ -1,5 +1,3 @@
-// import React from "react";
-// import { StrictMode } from "react";
 import { useState } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
@@ -25,38 +23,11 @@ const queryClient = new QueryClient({
   },
 });
 
-// Component must return markup which will always be the result of React.createElement or JSX
-// We are going to use JSX instead of this
-// const App = () => {
-//   //! second argument is the props, third argument is the children (can be an array)
-//   return React.createElement(
-//     "div", // we could give it either string or a component
-//     { id: "something-important" },
-//     [
-//       React.createElement("h1", {}, "Adopt Me!"),
-//       React.createElement(Pet, {
-//         animal: "Dog",
-//         name: "Luna",
-//         breed: "Havanese",
-//       }),
-//       React.createElement(Pet, {
-//         animal: "Bird",
-//         name: "Pepper",
-//         breed: "Cockatiel",
-//       }),
-//       React.createElement(Pet, {
-//         animal: "Cat",
-//         name: "Doink",
-//         breed: "Mixed",
-//       }),
-//     ]
-//   );
-// };
 const App = () => {
   const adoptedPetHook = useState(null);
   return (
     // <StrictMode> -- works only in development mode
-    // StrictMode would warn us about deprecated features, unsafe lifecycle methods, and other potential issues in our code
+    // ^ StrictMode would warn us about deprecated features, unsafe lifecycle methods, and other potential issues in our code
 
     /**
      * ! BrowserRouter - higher order component
@@ -81,14 +52,6 @@ const App = () => {
         </AdoptedPetContext.Provider>
       </QueryClientProvider>
     </BrowserRouter>
-
-    // <div>
-    //   <h1>Adopt Me!</h1>
-    //   <SearchParams />
-    // // <Pet animal="dog" name="Luna" breed="Havanese" />
-    // // <Pet animal="bird" name="Pepper" breed="Cockatiel" />
-    // // <Pet animal="cat" name="Doink" breed="Mixed" />
-    // </div>
     // </StrictMode>
   );
 };
